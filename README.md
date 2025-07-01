@@ -20,7 +20,44 @@ make distclean
 make BR2_EXTERNAL=$(realpath ..)/itemtracker itemtracker_defconfig
 make
 ```
-## Flashing Board
+
+## Compilation of a buildroot image for Raspberry Pi 1
+
+- Get Buildroot sources, specifying stable version 2025.02.4:
+
+```
+git clone --recurse-submodules https://github.com/buildroot/buildroot -b 2025.02.4
+```
+- Buildroot configuration by default for raspberry Pi 1:
+```
+cd buildroot
+make -j $(nproc) raspberrypi_defconfig
+```
+- Compilation of the complete systeme:
+```
+make -j $(nproc)
+```
+- Plug SD card;Find it with:
+```
+sudo fdisk -l
+```
+- Copie linux image on the SD card:
+```
+sudo dd if=output/images/sdcard.img of=/dev/<to determine> bs=4M status=progress
+```
+"to determine" -> "sudo fdisk -l"
+
+## Connecting the Raspberry Pi
+
+We use a TTl 3.3V adaptator.
+The usefull Pins are TX, RX and GND.
+TX and RX are crossed between raspberry's Pins and TTl 3.3V.
+
+![raspberrypiPinout](Resources/Pictures/raspberry-pi-rev2-gpio-pinout.jpg)
+![FTDIcable](Resources/Pictures/FTDIcable.jpg)
+
+ 
+## Serial port access from computer
 
 1. Plug FTDI cable on your computer
 
@@ -38,3 +75,5 @@ In which **x** is a number.
 ```
 picocom -b 115200 /dev/ttyUSBx
 ``` 
+
+

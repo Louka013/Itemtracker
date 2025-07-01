@@ -33,7 +33,7 @@ It returns : "FTDI USB Serial Device converter now attached to ttyUSB**x**".
 
 In which **x** is a number.
 
-**3.**Conect yourself to Raspberry Pi 1B's shell
+"**3.**"Conect yourself to Raspberry Pi 1B's shell
 
 ```
 picocom -b 115200 /dev/ttyUSBx

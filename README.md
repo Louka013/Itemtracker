@@ -22,20 +22,19 @@ make
 ```
 ## Flashing Board
 
-1.Plug FTDI cable on your computer
+**1.**Plug FTDI cable on your computer
 
-2.Find tty fitting with FTDI cable
+**2.**Find tty fitting with FTDI cable
 
 ```
-
 sudo dmesg
 ```
-It returns : "FTDI USB Serial Device converter now attached to ttyUSB**x**"
-In which **x** is a number
+It returns : "FTDI USB Serial Device converter now attached to ttyUSB**x**".
 
-3.Conect yourself to Raspberry Pi 1B's shell
+In which **x** is a number.
+
+**3.**Conect yourself to Raspberry Pi 1B's shell
 
 ```
-
 picocom -b 115200 /dev/ttyUSBx
 ``` 

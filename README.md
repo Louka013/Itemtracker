@@ -77,7 +77,7 @@ picocom -b 115200 /dev/ttyUSBx
 ``` 
 
 ## Flashing card
-```
+
 ```
 sudo dd if=output/images/sdcard.img of=/dev/<to determine> bs=4M status=progress
 ```

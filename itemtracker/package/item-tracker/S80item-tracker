@@ -4,11 +4,11 @@ case "$1" in
 	start)
 		modprobe cdc-acm
 		# Start middleware as a daemon
-	#	item-tracker &
+		item-tracker &
 		;;
 
 	stop)
-	#	killall -q -15 item-tracker
+		killall -q -15 item-tracker
 		modprobe -r cdc-acm
 		;;
 

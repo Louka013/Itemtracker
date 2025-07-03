@@ -84,4 +84,6 @@ sudo dd if=output/images/sdcard.img of=/dev/<to determine> bs=4M status=progress
 ## Documentation
 
 for Servo Motor SG90: https://docs.arduino.cc/libraries/servo/
+
 for Ultrasonic Sensor: https://projecthub.arduino.cc/Isaac100/getting-started-with-the-hc-sr04-ultrasonic-sensor-7cabe1
+ 

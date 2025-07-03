@@ -1,0 +1,2 @@
+config BR2_PACKAGE_ITEM_TRACKER
+	bool "Item tracker"

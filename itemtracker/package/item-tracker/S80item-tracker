@@ -1,0 +1,19 @@
+#!/bin/sh
+
+case "$1" in
+	start)
+		modprobe cdc-acm
+		# Start middleware as a daemon
+	#	item-tracker &
+		;;
+
+	stop)
+	#	killall -q -15 item-tracker
+		modprobe -r cdc-acm
+		;;
+
+	*)
+		echo "Usage: $0 {start|stop}"
+		exit 1
+		;;
+esac 

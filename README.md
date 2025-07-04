@@ -81,6 +81,13 @@ picocom -b 115200 /dev/ttyUSBx
 ```
 sudo dd if=output/images/sdcard.img of=/dev/<to determine> bs=4M status=progress
 ```
+
+## Refresh after changes in your code
+
+```
+rm -rf output/build/item-tracker-1.1/ && make
+```
+
 ## Documentation
 
 for Servo Motor SG90: https://docs.arduino.cc/libraries/servo/
